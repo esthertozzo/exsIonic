@@ -1,19 +1,38 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
+import { Component } from '@angular/core';
 
-import { HomePageRoutingModule } from './home-routing.module';
-
-
-@NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule
-  ],
-  declarations: [HomePage]
+@Component({
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
+  standalone: false,
 })
-export class HomePageModule {}
+export class HomePage {
+
+  constructor() {}
+
+  // atributos
+  n1="";
+  n2="";
+  dolar="";
+  real="5.78";
+  res="";
+  valorEmReal="";
+  calcularMediaRes="";
+  ac="";
+  at="";
+  agh="";
+
+  // metodo
+  somar(){
+    this.res = (parseFloat(this.n1) + parseFloat(this.n2)).toString();
+  }
+
+  converter(){
+    this.valorEmReal = (parseFloat(this.dolar) * parseFloat(this.real)).toString();
+  }
+
+  calcularMedia(){
+    this.calcularMediaRes = (((parseFloat(this.ac)*3) + (parseFloat(this.at)*5) + (parseFloat(this.agh)*2))/10).toString();
+  }
+
+}
