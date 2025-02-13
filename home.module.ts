@@ -28,7 +28,7 @@ export class HomePage {
   }
 
   converter(){
-    this.valorEmReal = (parseFloat(this.dolar) * parseFloat(this.real)).toString();
+    this.valorEmReal = (parseFloat(this.dolar) * Math.round(parseFloat(this.real))).toString();
   }
 
   calcularMedia(){
