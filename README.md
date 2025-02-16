@@ -1,5 +1,5 @@
 # ionic
-
+ executar no cmd da pasta
 > ionic start
 
 > pick fremawork Angular
